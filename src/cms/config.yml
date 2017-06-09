@@ -3,6 +3,7 @@ backend:
   repo: <% GITHUB_REPOSITORY %> # Gulp will replace this with your GitHub repository
   branch: master # Branch to update (master by default)
 
+publish_mode: editorial_workflow
 media_folder: "site/static/img" # Folder where user uploaded files should go
 public_folder: "img"
 
@@ -14,6 +15,25 @@ collections: # A list of collections the CMS should be able to edit
     fields: # The fields each document in this collection have
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Intro Blurb", name: "description", widget: "text"}
+      - {label: "Tags", name: "tags", widget: "list", required: false}
+      - {label: "Topics", name: "topics", widget: "list", required: false}
       - {label: "Image", name: "image", widget: "image", required: false}
+      - {label: "Intro Blurb", name: "description", widget: "text"}
+      - {label: "Author", name: "author", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
+  - name: "settings"
+    label: "Settings"
+    editor:
+      preview: false
+    files:
+      - name: "authors"
+        label: "Authors"
+        file: "site/data/authors.yml"
+        description: "Author descriptions"
+        fields:
+          - name: authors
+            label: Authors
+            widget: list
+            fields:
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Description", name: "description", widget: "markdown"}
