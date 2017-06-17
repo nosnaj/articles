@@ -1,11 +1,16 @@
-+++
-date = "2017-06-06T20:43:28+08:00"
-draft = false
-title = "Hello, World!"
-tags  = [ "About", "EngineersMY", "Howto"]
-topics = [ "About" ]
-
-+++
+---
+date: '2017-06-06T20:43:28+08:00'
+draft: false
+title: 'Hello, World!'
+tags:
+  - About
+  - EngineersMY
+  - Howto
+topics:
+  - About
+description: But it doesn't stop here
+author: Chee Leong
+---
 
 ## Hello, World! But it doesn't stop here.
 
@@ -45,3 +50,4 @@ Upcoming, we'll cover the article contribution guidelines.
 
 * [Articles Contribution (Pt. 1 Content)](/post/content-we-want)
 * [Articles Contribution (Pt. 2 Howto)](/post/howto-content)
+
