@@ -1,8 +1,9 @@
-<a href="{{ .Permalink }}" class="no-underline pa3 bg-grey-1 br1 mb2 db raise w-100">
-
-	<h2 class="f4 b lh-title mb1 primary">{{ .Title }}</h2>
-	<h3 class="mid-gray f-6 lh-title mb2">{{ .Date.Format "Mon, Jan 2, 2006" }}</h3>
-	<p class="mb0 lh-copy">{{ .Description }}</p>
-	<p class="link b dib black mb0">Read more →</p>
-
-</a>
+<div class="card">
+  <div class="card-block">
+    <a class="card-title" href="{{ .Permalink }}">
+      <h4>{{ .Title }}</h4>
+    </a>
+    <!-- <h3 class="card-text">{{ .Date.Format "Mon, Jan 2, 2006" }}</h3> -->
+    <p class="card-text">{{ .Description }}</p>
+  </div>
+</div>

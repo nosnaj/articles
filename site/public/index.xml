@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Articles</title>
+    <link>/</link>
+    <description>Recent content on Articles</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 21 Jun 2017 06:35:15 +0000</lastBuildDate>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Setup DataCenter In a Box Using LXD &#43; ZFS</title>
+      <link>/post/setup-datacenter-in-a-box-using-lxd-zfs/</link>
+      <pubDate>Wed, 21 Jun 2017 06:35:15 +0000</pubDate>
+      
+      <guid>/post/setup-datacenter-in-a-box-using-lxd-zfs/</guid>
+      <description>Setup DataCenter In a Box Using LXD + ZFS TL;DR A simple method to setup a clustered environment mimicking your production system without needing to spend a dime in cloud computing cost in Azure. Setup a full multi-VNet with 3 subnets in which to deploy 3 independent Consul node to form a fully running Consul cluster.
+Getting Started Assumes on one of the below environments running Ubuntu 16.04: - Xhyve (OSX) - Hyper-V (Windows) - VirtualBox (no native Hypervisors like above) - Azure (simulate full cluster using only one node; with fast network)</description>
+    </item>
+    
+    <item>
+      <title>Articles Contribution (Pt. 2 Howto)</title>
+      <link>/post/howto-content/</link>
+      <pubDate>Wed, 07 Jun 2017 20:50:36 +0800</pubDate>
+      
+      <guid>/post/howto-content/</guid>
+      <description>Content creators, get ready The gory details We are using Netlify CMS here.
+For those wants to hack with this Netlify CMS.
+It is a static site powered by Hugo hosted on Netlify.
+The posts are hosted at the git repo&amp;rsquo;s site/content directory.
+Opinions are welcomed.
+How to publish For those who adapt with Markdown and Git, you can submit a pull request to the article repo https://github.com/engineersmy/articles.
+You can also login to the admin dashboard via your Github account.</description>
+    </item>
+    
+    <item>
+      <title>Articles Contribution (Pt. 1 Content)</title>
+      <link>/post/content-we-want/</link>
+      <pubDate>Wed, 07 Jun 2017 20:01:43 +0800</pubDate>
+      
+      <guid>/post/content-we-want/</guid>
+      <description>We need articles, what are we looking for? Content contributors we&amp;rsquo;re looking for  One off article Series (weekly, monthly&amp;hellip;) about a certain topic Cross posting (we&amp;rsquo;re glad to mirror posts with proper attribution)  We&amp;rsquo;re looking for the following contents Technical  Tutorial Guide Snippets with explanation Technical user group introduction Project introduction  Non Technical  News, especially about the industry Business related (tips and tricks or experience sharing)  As of now, we don&amp;rsquo;t have much guidelines yet, but posts will be moderated</description>
+    </item>
+    
+    <item>
+      <title>Hello, World!</title>
+      <link>/post/hello-world/</link>
+      <pubDate>Tue, 06 Jun 2017 20:43:28 +0800</pubDate>
+      
+      <guid>/post/hello-world/</guid>
+      <description>Hello, World! But it doesn&amp;rsquo;t stop here. Engineers.My is a public working group, aims to build an open source platform for learning, sharing and collaboration.
+The current goals  Cross pollination and collaboration between different technical groups Advertise local open source projects Curation of local tech news and meetups Technical articles Newsletter  What this movement is not about  To replace technical groups Yet another chat room Not a meetup group, not the priority for now  What we need help for  Homepage design Article contribution Design works  Details will be coming soon, for now, ping the folks on Slack for more.</description>
+    </item>
+    
+  </channel>
+</rss>

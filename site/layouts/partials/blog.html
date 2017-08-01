@@ -1,17 +1,17 @@
-<div class="bg-off-white pv2">
-  <div class="ph3 mw7 center">
+<div id="frontpage" class="container">
 
-		<div class="w-100 flex-ns mhn1-ns flex-wrap mb3">
-			{{ range where .Data.Pages "Type" "post" }}
-				<div class="ph1-ns w-33-ns flex">
-					{{ .Render "li" }}
-				</div>
-			{{ end }}
-		</div>
+    {{ range $i, $e := (where .Data.Pages "Type" "post") }}
+      {{ if modBool $i 2 }}
+      <div class="row">
+        <div class="col">
+          {{ .Render "li" }}
+        </div>
+      {{ else }}
+        <div class="col">
+          {{ .Render "li" }}
+        </div>
+      </div>
+      {{ end }}
+    {{ end }}
 
-		<!-- <div class="tc"> -->
-		<!-- 	<a href="/post" class="btn raise">Read more</a> -->
-		<!-- </div> -->
-
-	</div>
 </div>

@@ -1,15 +1,18 @@
 {{ partial "head" . }}
 {{ partial "nav" . }}
-  <div class="mw7 center ph3 pv2">
-    <h1 class="f3 lh-title b mb3">{{.Title}}</h1>
-    <div class="flex justify-between grey-3">
+
+  <div id="post" class="container">
+    <h1>{{.Title}}</h1>
+    <div class="">
       <p>{{ .Date.Format "Mon, Jan 2, 2006" }}</p>
       <p>Read in {{ .ReadingTime }} minutes</p>
     </div>
-    <div class="cms mw6">
+    <div class="">
       <p>{{ .Description }}</p>
       {{ if .Params.image }}<img src="{{ .Params.image }}" alt="{{ .Title }}" />{{ end }}
       {{ .Content }}
     </div>
   </div>
+
+{{ partial "highlight" . }}
 {{ partial "footer" . }}

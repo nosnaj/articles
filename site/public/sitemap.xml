@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>/post/setup-datacenter-in-a-box-using-lxd-zfs/</loc>
+    <lastmod>2017-06-21T06:35:15+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/howto-content/</loc>
+    <lastmod>2017-06-07T20:50:36+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/content-we-want/</loc>
+    <lastmod>2017-06-07T20:01:43+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/hello-world/</loc>
+    <lastmod>2017-06-06T20:43:28+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/about/</loc>
+    <lastmod>2017-06-07T20:50:36+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2017-06-21T06:35:15+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/engineersmy/</loc>
+    <lastmod>2017-06-07T20:50:36+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/howto/</loc>
+    <lastmod>2017-06-07T20:50:36+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/lxd/</loc>
+    <lastmod>2017-06-21T06:35:15+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/post/</loc>
+    <lastmod>2017-06-21T06:35:15+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2017-06-07T20:50:36+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/zfs/</loc>
+    <lastmod>2017-06-21T06:35:15+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>
