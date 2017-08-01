@@ -13,7 +13,6 @@ description: >-
   Azure Cloud system on your own laptop.
 author: Michael Leow
 ---
-#  Setup DataCenter In a Box Using LXD + ZFS
 
 ## Objective
 - To document a method to deploy the so that can simulate a full VNet like in Azure Cloud system on your own laptop
@@ -25,12 +24,12 @@ author: Michael Leow
 ## References
 - Code can be found in the current [Nomad Box](https://www.github.com/leowmjw/nomad-box) code
 - The main script inside the repo is in `/lxd/scripts/initlxd.sh`.
- 
-## Highlights 
-- Learn what are the base hypervisor's needed to deploy this: VirtualBox, Xhyve, MS Hyper-V 
+
+## Highlights
+- Learn what are the base hypervisor's needed to deploy this: VirtualBox, Xhyve, MS Hyper-V
 - Learn how to install all the pre-reqs needed for LXD, ZFS installation
 - Learn how to prepare the ZFS Pool for use by ZFS
-- Learn how to prepare a headless install and config of LXD; with some useful default profiles 
+- Learn how to prepare a headless install and config of LXD; with some useful default profiles
 - Learn how to pull images that have cloud-init capablities and link their automation to with the profiles
 - Test the automatic bootstrap of a consul cluster
 
@@ -48,12 +47,12 @@ A simple method to setup a clustered environment mimicking your production syste
 
 ### Getting Started
 Assumes on one of the below environments running Ubuntu 16.04:
-- Xhyve (OSX) 
+- Xhyve (OSX)
 - Hyper-V (Windows)
 - VirtualBox (no native Hypervisors like above)
 - Azure (simulate full cluster using only one node; with fast network)
 
-Get the script, make executable and run the script as found in the Nomad Box [repo](https://github.com/leowmjw/nomad-box). The main script inside the repo is in `/lxd/scripts/initlxd.sh`.  
+Get the script, make executable and run the script as found in the Nomad Box [repo](https://github.com/leowmjw/nomad-box). The main script inside the repo is in `/lxd/scripts/initlxd.sh`.
 
 The following is just explanation what the script is doing...
 
@@ -120,7 +119,7 @@ The code to setup the Azure node is as below:
 #     dd if=/dev/zero of=/var/lib/lxd/zfs-azure.img bs=1k count=1 seek=100M && \
 #          zpool create my-zfs-pool /var/lib/lxd/zfs-azure.img && \
 #          umount /mnt && zpool add -f my-zfs-pool cache /dev/sdb
-$ AZURE_MODE="x" sudo ./test.bash 
+$ AZURE_MODE="x" sudo ./test.bash
 1+0 records in
 1+0 records out
 1024 bytes (1.0 kB, 1.0 KiB) copied, 9.9e-05 s, 10.3 MB/s
@@ -139,13 +138,13 @@ tmpfs          tmpfs     731M     0  731M   0% /run/user/1000
 my-zfs-pool    zfs       104G     0  104G   0% /my-zfs-pool
 ```
 
-The previous device will start losing data if it gets corrupted so is not advisable for production; at the minimum there should be a mirror. 
+The previous device will start losing data if it gets corrupted so is not advisable for production; at the minimum there should be a mirror.
 
 So if we wanted to do a mirror, it can be mirrored with the smaller device for 10GB let's say, like so:
 ```
 dd if=/dev/zero of=/var/lib/lxd/zfs-mirror1.img bs=1k count=1 seek=10M & \
     dd if=/dev/zero of=/var/lib/lxd/zfs-mirror2.img bs=1k count=1 seek=10M && \
-    zpool create my-zfs-pool mirror /var/lib/lxd/zfs-mirror1.img /var/lib/lxd/zfs-mirror2.img 
+    zpool create my-zfs-pool mirror /var/lib/lxd/zfs-mirror1.img /var/lib/lxd/zfs-mirror2.img
 ```
 
 Once the underlying pool is setup; you can confirm its sturcture and even run `zpool scrub` to check the underlying setup has no errors.
@@ -306,7 +305,7 @@ Source:
     Alias: 17.04
 ```
 #### Executing cloud-init templates
-Now that the images are available, there is a need to create a profile for the Foundation type nodes which will execute the cloud-init script via the user-data parameter.  
+Now that the images are available, there is a need to create a profile for the Foundation type nodes which will execute the cloud-init script via the user-data parameter.
 
 The cloud-init script will be similar to the ones used in the main Nomad Box Azure setup.  The lxd-foundation-init.sh used below can be found in the Nomad Box repo under `/lxd/scripts/lxd-foundation-init.sh`
 ```
@@ -335,7 +334,7 @@ lxc start f1 && lxc start f2 && lxc start f3
 
 ```
 
-NOTE: Consul servers need to have custom node-id inside LXD, otherwise it gets confused that there are multiple Consul servers that are identical.  
+NOTE: Consul servers need to have custom node-id inside LXD, otherwise it gets confused that there are multiple Consul servers that are identical.
 
 To solve this, the Consul servers need to be executed with the flag `-disable-host-node-id` as documented [here](https://www.consul.io/docs/agent/options.html#_disable_host_node_id)
 

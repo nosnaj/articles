@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://engineers.my/"
 languageCode = "en-us"
 title = "Articles"
 theme = "hugo-theme-crisp"
